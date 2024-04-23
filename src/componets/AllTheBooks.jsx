@@ -6,6 +6,8 @@ import horror from "../books/horror.json"
 import romance from "../books/romance.json"
 import scifi from "../books/scifi.json"
 import "../CSS/AllTheBooks.css"
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 
 function AllTheBooks() {
@@ -42,7 +44,12 @@ function AllTheBooks() {
           {books[filter].map((book, index) => (
             <Col key={index} sm={12} md={6} lg={4} xl={3} className="ciao">
               <Card className="mb-4 card-container">
-                <Card.Img variant="top" src={book.img} />
+                {/* <Card.Img variant="top" src={book.img} /> */}
+                <LazyLoadImage
+              alt={book.title}
+              src={book.img}
+              variant="top"
+            />
                 <Card.Body>
                   <Card.Title>{book.title}</Card.Title>
                   <Card.Text>{`Prezzo: ${book.price}€`}</Card.Text>
