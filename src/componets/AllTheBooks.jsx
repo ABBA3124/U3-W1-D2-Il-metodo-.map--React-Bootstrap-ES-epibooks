@@ -40,7 +40,7 @@ function AllTheBooks() {
         </Row>
         <Row>
           {books[filter].map((book, index) => (
-            <Col key={index} sm={12} md={6} lg={4} xl={3}>
+            <Col key={index} sm={12} md={6} lg={4} xl={3} className="ciao">
               <Card className="mb-4 card-container">
                 <Card.Img variant="top" src={book.img} />
                 <Card.Body>
