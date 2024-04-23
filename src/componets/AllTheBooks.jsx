@@ -45,8 +45,8 @@ function AllTheBooks() {
                 <Card.Img variant="top" src={book.img} />
                 <Card.Body>
                   <Card.Title>{book.title}</Card.Title>
-                  <Card.Text>{`Price: ${book.price}€`}</Card.Text>
-                  <Card.Text>{`Category: ${book.category}`}</Card.Text>
+                  <Card.Text>{`Prezzo: ${book.price}€`}</Card.Text>
+                  <Card.Text>{`Categoria: ${book.category}`}</Card.Text>
                   <Button variant="primary">Scopri Di Più 🔍</Button>
                 </Card.Body>
               </Card>
